@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigo Iké - Seu Companheiro de Saúde Mental</title>
+    <meta name="description" content="Um companheiro, não uma ferramenta. Apoio emocional 24/7, rastreamento de humor, e conexão com psicólogos profissionais.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #3D3230;
+            background: linear-gradient(135deg, #FFF5ED 0%, #F5EFE7 100%);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #D9B5A8 0%, #C9A89E 100%);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            box-shadow: 0 10px 30px rgba(217, 181, 168, 0.3);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #3D3230;
+            margin-bottom: 16px;
+        }
+
+        .tagline {
+            font-size: 20px;
+            color: #6B7280;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #6B7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #3D3230;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #6B7280;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #D9B5A8 0%, #C9A89E 100%);
+            color: white;
+            box-shadow: 0 8px 20px rgba(217, 181, 168, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(217, 181, 168, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.9);
+            color: #3D3230;
+            border: 2px solid #D9B5A8;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .features h2 {
+            font-size: 36px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #3D3230;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 32px;
+            border-radius: 40px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #3D3230;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #6B7280;
+            line-height: 1.6;
+        }
+
+        /* Gradient backgrounds for feature icons */
+        .icon-chat { background: linear-gradient(135deg, #C8B8D4 0%, #DDD6FE 100%); }
+        .icon-mood { background: linear-gradient(135deg, #D9B5A8 0%, #E5D3C8 100%); }
+        .icon-tools { background: linear-gradient(135deg, #C8D9E8 0%, #B8C9E3 100%); }
+        .icon-support { background: linear-gradient(135deg, #F5D9E0 0%, #ECC9D8 100%); }
+
+        /* Privacy Policy Section */
+        .privacy {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .privacy h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 32px;
+            color: #3D3230;
+        }
+
+        .privacy h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: #3D3230;
+        }
+
+        .privacy p, .privacy li {
+            font-size: 16px;
+            color: #6B7280;
+            margin-bottom: 16px;
+        }
+
+        .privacy ul {
+            margin-left: 24px;
+            margin-bottom: 24px;
+        }
+
+        .privacy li {
+            margin-bottom: 8px;
+        }
+
+        .privacy a {
+            color: #C9A89E;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .privacy a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.6);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        footer p {
+            color: #6B7280;
+            font-size: 16px;
+        }
+
+        .footer-quote {
+            font-size: 20px;
+            font-style: italic;
+            color: #C9A89E;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 36px; }
+            .hero h2 { font-size: 28px; }
+            .features h2 { font-size: 28px; }
+            .privacy h2 { font-size: 28px; }
+            .cta-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">🫂</div>
+        <h1>Amigo Iké</h1>
+        <p class="tagline">Um companheiro, não uma ferramenta</p>
+        <p class="subtitle">Alguém sentado ao seu lado, não olhando para você</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Apoio emocional 24/7,<br>no seu ritmo</h2>
+            <p>Amigo Iké é um aplicativo brasileiro de saúde mental que oferece companhia sempre disponível, rastreamento de humor, exercícios de respiração, e conexão com psicólogos profissionais.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Em breve na App Store</a>
+                <a href="#privacy" class="btn btn-secondary">Política de Privacidade</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Como o Amigo Iké pode ajudar</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon icon-chat">💬</div>
+                    <h3>Conversa sem julgamento</h3>
+                    <p>IA compassiva disponível 24/7 para ouvir, validar, e oferecer suporte emocional quando você mais precisa.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-mood">🎭</div>
+                    <h3>Rastreamento de humor</h3>
+                    <p>Acompanhe como você está se sentindo ao longo do tempo e identifique padrões nas suas emoções.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-tools">🌿</div>
+                    <h3>Ferramentas de autocuidado</h3>
+                    <p>Exercícios de respiração, ancoragem, meditação guiada, e diário para momentos difíceis.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon icon-support">🆘</div>
+                    <h3>Apoio profissional</h3>
+                    <p>Conexão direta com CVV, CAPS, e psicólogos parceiros quando você precisar de ajuda especializada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section class="privacy" id="privacy">
+        <div class="container">
+            <h2>Política de Privacidade</h2>
+            <p><strong>Última atualização:</strong> 19 de janeiro de 2026</p>
+
+            <h3>1. Introdução</h3>
+            <p>Bem-vindo ao Amigo Iké. Sua privacidade é extremamente importante para nós. Esta Política de Privacidade explica como coletamos, usamos, armazenamos e protegemos suas informações pessoais quando você usa nosso aplicativo de saúde mental.</p>
+            <p>Amigo Iké é operado pela Vibecode e está em conformidade com a Lei Geral de Proteção de Dados (LGPD) do Brasil.</p>
+
+            <h3>2. Informações que Coletamos</h3>
+            <p>Coletamos as seguintes informações quando você usa o Amigo Iké:</p>
+            <ul>
+                <li><strong>Informações de conta:</strong> Nome, e-mail, foto de perfil (opcional)</li>
+                <li><strong>Dados de saúde mental:</strong> Avaliações de humor, mensagens de chat com a IA, entradas de diário, notas de reestruturação cognitiva</li>
+                <li><strong>Dados de uso:</strong> Recursos utilizados, frequência de uso, interações com o aplicativo</li>
+                <li><strong>Informações de assinatura:</strong> Status de assinatura, histórico de pagamentos (processados via RevenueCat e Apple/Google)</li>
+                <li><strong>Dados analíticos:</strong> Padrões de uso anônimos, métricas de desempenho do aplicativo (via Mixpanel e Sentry)</li>
+            </ul>
+
+            <h3>3. Como Usamos Suas Informações</h3>
+            <p>Usamos suas informações para:</p>
+            <ul>
+                <li>Fornecer suporte emocional personalizado através da IA</li>
+                <li>Acompanhar seu progresso emocional ao longo do tempo</li>
+                <li>Melhorar os recursos e a experiência do aplicativo</li>
+                <li>Processar assinaturas e pagamentos</li>
+                <li>Detectar situações de crise e oferecer recursos apropriados</li>
+                <li>Enviar notificações importantes sobre o serviço</li>
+                <li>Cumprir com obrigações legais</li>
+            </ul>
+
+            <h3>4. Segurança e Criptografia</h3>
+            <p>Levamos a segurança dos seus dados muito a sério:</p>
+            <ul>
+                <li><strong>Criptografia AES-256:</strong> Todas as mensagens de chat, entradas de diário e notas sensíveis são criptografadas usando AES-256-CBC</li>
+                <li><strong>Armazenamento seguro de chaves:</strong> As chaves de criptografia são armazenadas no SecureStore com proteção de hardware</li>
+                <li><strong>Transmissão segura:</strong> Todas as comunicações entre o aplicativo e nossos servidores usam HTTPS</li>
+                <li><strong>Isolamento de dados:</strong> Seus dados são isolados e visíveis apenas para você</li>
+                <li><strong>Sem acesso da equipe:</strong> Nenhum membro da equipe Amigo Iké pode ler suas mensagens ou entradas de diário criptografadas</li>
+            </ul>
+
+            <h3>5. Compartilhamento de Dados</h3>
+            <p>Nós NÃO vendemos seus dados pessoais. Compartilhamos informações limitadas apenas com:</p>
+            <ul>
+                <li><strong>Supabase:</strong> Serviço de banco de dados e autenticação (dados criptografados)</li>
+                <li><strong>Anthropic (Claude AI):</strong> Processamento de mensagens de chat (sem dados identificáveis)</li>
+                <li><strong>RevenueCat:</strong> Gerenciamento de assinaturas (dados de pagamento anônimos)</li>
+                <li><strong>Mixpanel:</strong> Análise de uso anônima (sem informações pessoalmente identificáveis)</li>
+                <li><strong>Sentry:</strong> Monitoramento de erros (dados filtrados, sem PII)</li>
+            </ul>
+            <p>Podemos divulgar informações se exigido por lei ou para proteger a segurança de nossos usuários.</p>
+
+            <h3>6. Retenção de Dados</h3>
+            <p>Mantemos seus dados enquanto sua conta estiver ativa. Você pode solicitar a exclusão de seus dados a qualquer momento através das configurações do aplicativo ou entrando em contato conosco em <a href="mailto:privacy@amigoike.com">privacy@amigoike.com</a>.</p>
+
+            <h3>7. Seus Direitos (LGPD)</h3>
+            <p>De acordo com a LGPD, você tem o direito de:</p>
+            <ul>
+                <li>Acessar seus dados pessoais</li>
+                <li>Corrigir dados imprecisos</li>
+                <li>Solicitar a exclusão de seus dados</li>
+                <li>Exportar seus dados em formato legível</li>
+                <li>Revogar consentimento a qualquer momento</li>
+                <li>Opor-se ao processamento de dados</li>
+            </ul>
+
+            <h3>8. Dados de Menores de Idade</h3>
+            <p>O Amigo Iké é destinado a usuários com 18 anos ou mais. Não coletamos intencionalmente dados de menores de 18 anos. Se descobrirmos que coletamos dados de um menor, excluiremos essas informações imediatamente.</p>
+
+            <h3>9. Cookies e Tecnologias de Rastreamento</h3>
+            <p>Usamos tecnologias de análise (Mixpanel, Sentry) para entender como você usa o aplicativo. Você pode desativar a análise nas configurações do aplicativo.</p>
+
+            <h3>10. Alterações nesta Política</h3>
+            <p>Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos você sobre mudanças significativas através do aplicativo ou por e-mail.</p>
+
+            <h3>11. Contato</h3>
+            <p>Se você tiver dúvidas sobre esta Política de Privacidade ou sobre como tratamos seus dados, entre em contato:</p>
+            <ul>
+                <li><strong>E-mail:</strong> <a href="mailto:privacy@amigoike.com">privacy@amigoike.com</a></li>
+                <li><strong>Suporte:</strong> <a href="mailto:suporte@amigoike.com">suporte@amigoike.com</a></li>
+            </ul>
+
+            <h3>12. Consentimento</h3>
+            <p>Ao usar o Amigo Iké, você concorda com esta Política de Privacidade e consente com a coleta, uso e processamento de suas informações conforme descrito aqui.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-quote">"Estar aqui já é um ato de coragem." 🫂</p>
+            <p>&copy; 2026 Amigo Iké - Vibecode. Todos os direitos reservados.</p>
+            <p style="margin-top: 16px; font-size: 14px;">
+                Amigo Iké não substitui tratamento profissional. Em caso de crise, ligue para CVV 188.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
