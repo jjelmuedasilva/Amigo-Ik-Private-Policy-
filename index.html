@@ -29,7 +29,6 @@
             padding: 0 24px;
         }
 
-        /* Header */
         header {
             padding: 48px 24px;
             text-align: center;
@@ -44,10 +43,10 @@
             height: 120px;
         }
 
-        .logo-svg {
+        .logo-img {
             width: 100%;
             height: 100%;
-            filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.1));
+            object-fit: contain;
         }
 
         h1 {
@@ -74,7 +73,6 @@
             font-weight: 400;
         }
 
-        /* Hero Section */
         .hero {
             padding: 100px 24px;
             text-align: center;
@@ -142,7 +140,6 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* Features Section */
         .features {
             padding: 100px 24px;
             background: white;
@@ -204,19 +201,16 @@
             line-height: 1.7;
         }
 
-        /* Icon gradients matching app */
         .icon-chat { background: linear-gradient(135deg, #C8B8D4 0%, #DDD6FE 100%); }
         .icon-mood { background: linear-gradient(135deg, #D9B5A8 0%, #E5D3C8 100%); }
         .icon-tools { background: linear-gradient(135deg, #C8D9E8 0%, #B8C9E3 100%); }
         .icon-support { background: linear-gradient(135deg, #F5D9E0 0%, #ECC9D8 100%); }
 
-        /* SVG Icons */
         .feature-icon svg {
             width: 36px;
             height: 36px;
         }
 
-        /* Privacy Policy Section */
         .privacy {
             padding: 100px 24px;
             max-width: 900px;
@@ -274,7 +268,6 @@
             font-weight: 600;
         }
 
-        /* Footer */
         footer {
             padding: 80px 24px;
             text-align: center;
@@ -295,7 +288,6 @@
             font-weight: 600;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             h1 { font-size: 40px; }
             .hero h2 { font-size: 32px; }
@@ -320,52 +312,15 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="logo-container">
-            <!-- Amigo Iké Logo SVG -->
-            <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <!-- Background circle -->
-                <circle cx="100" cy="100" r="95" fill="#F5EFE7"/>
-
-                <!-- Chat bubble (orange circle with smile) -->
-                <circle cx="70" cy="95" r="25" fill="#F5A962" stroke="#3D3E52" stroke-width="3"/>
-
-                <!-- Smile face on chat bubble -->
-                <circle cx="64" cy="90" r="2.5" fill="#3D3E52"/>
-                <circle cx="76" cy="90" r="2.5" fill="#3D3E52"/>
-                <path d="M 64 100 Q 70 104 76 100" stroke="#3D3E52" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-
-                <!-- Chat bubble tail -->
-                <path d="M 55 110 L 50 120 L 60 112" fill="#F5A962" stroke="#3D3E52" stroke-width="3" stroke-linejoin="round"/>
-
-                <!-- Head silhouette (rounded rectangle shape) -->
-                <path d="M 95 135 L 95 80 Q 95 70 105 70 L 125 70 Q 135 70 135 80 L 135 135 Z"
-                      fill="url(#headGradient)" stroke="#3D3E52" stroke-width="3"/>
-
-                <!-- Heart in head -->
-                <path d="M 115 85
-                         C 112 82 108 82 106 85
-                         C 106 88 108 91 115 98
-                         C 122 91 124 88 124 85
-                         C 124 82 120 82 117 85
-                         C 116.5 84.5 115.5 84.5 115 85 Z"
-                      fill="#F29BA7" stroke="#3D3E52" stroke-width="2"/>
-
-                <defs>
-                    <linearGradient id="headGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style="stop-color:#E5B8CE;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#A8B8D8;stop-opacity:1" />
-                    </linearGradient>
-                </defs>
-            </svg>
+            <img src="2-2.png" alt="Amigo Iké Logo" class="logo-img" />
         </div>
         <h1>Amigo Iké</h1>
         <p class="tagline">Um companheiro, não uma ferramenta</p>
         <p class="subtitle">Alguém sentado ao seu lado, não olhando para você</p>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h2>Apoio emocional 24/7,<br>no seu ritmo</h2>
@@ -377,7 +332,6 @@
         </div>
     </section>
 
-    <!-- Features Section -->
     <section class="features">
         <div class="container">
             <h2>Como o Amigo Iké pode ajudar</h2>
@@ -428,7 +382,6 @@
         </div>
     </section>
 
-    <!-- Privacy Policy Section -->
     <section class="privacy" id="privacy">
         <div class="container">
             <h2>Política de Privacidade</h2>
@@ -516,7 +469,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p class="footer-quote">"Estar aqui já é um ato de coragem."</p>
