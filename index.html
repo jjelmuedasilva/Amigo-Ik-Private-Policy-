@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amigo Iké - Seu Companheiro de Saúde Mental</title>
     <meta name="description" content="Um companheiro, não uma ferramenta. Apoio emocional 24/7, rastreamento de humor, e conexão com psicólogos profissionais.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,53 +16,54 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #3D3230;
-            background: linear-gradient(135deg, #FFF5ED 0%, #F5EFE7 100%);
+            background: #FFF5ED;
             overflow-x: hidden;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
         /* Header */
         header {
-            padding: 40px 20px;
+            padding: 48px 24px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(61, 50, 48, 0.08);
         }
 
-        .logo {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, #D9B5A8 0%, #C9A89E 100%);
-            border-radius: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            box-shadow: 0 10px 30px rgba(217, 181, 168, 0.3);
+        .logo-container {
+            margin: 0 auto 32px;
+            width: 120px;
+            height: 120px;
+        }
+
+        .logo-svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.1));
         }
 
         h1 {
-            font-size: 48px;
+            font-size: 56px;
             font-weight: 800;
             color: #3D3230;
             margin-bottom: 16px;
+            letter-spacing: -0.02em;
         }
 
         .tagline {
-            font-size: 20px;
+            font-size: 22px;
             color: #6B7280;
             font-style: italic;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            font-weight: 500;
         }
 
         .subtitle {
@@ -67,38 +71,42 @@
             color: #6B7280;
             max-width: 600px;
             margin: 0 auto;
+            font-weight: 400;
         }
 
         /* Hero Section */
         .hero {
-            padding: 80px 20px;
+            padding: 100px 24px;
             text-align: center;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
         }
 
         .hero h2 {
-            font-size: 36px;
+            font-size: 48px;
             font-weight: 800;
             color: #3D3230;
-            margin-bottom: 24px;
-            line-height: 1.3;
+            margin-bottom: 28px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
         }
 
         .hero p {
             font-size: 20px;
             color: #6B7280;
             max-width: 700px;
-            margin: 0 auto 40px;
+            margin: 0 auto 48px;
+            line-height: 1.7;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 16px;
+            gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 16px 40px;
+            padding: 18px 48px;
             font-size: 18px;
             font-weight: 600;
             border: none;
@@ -107,149 +115,171 @@
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, #D9B5A8 0%, #C9A89E 100%);
             color: white;
-            box-shadow: 0 8px 20px rgba(217, 181, 168, 0.4);
+            box-shadow: 0 12px 32px rgba(217, 181, 168, 0.35);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(217, 181, 168, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(217, 181, 168, 0.45);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.9);
+            background: white;
             color: #3D3230;
             border: 2px solid #D9B5A8;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .btn-secondary:hover {
-            background: white;
-            transform: translateY(-2px);
+            background: #FFF5ED;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         /* Features Section */
         .features {
-            padding: 80px 20px;
-            background: rgba(255, 255, 255, 0.4);
+            padding: 100px 24px;
+            background: white;
         }
 
         .features h2 {
-            font-size: 36px;
+            font-size: 44px;
             font-weight: 800;
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 72px;
             color: #3D3230;
+            letter-spacing: -0.02em;
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 32px;
-            max-width: 1000px;
+            gap: 40px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .feature-card {
-            background: white;
-            padding: 40px 32px;
-            border-radius: 40px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            background: #FFF5ED;
+            padding: 48px 40px;
+            border-radius: 32px;
+            border: 1px solid rgba(61, 50, 48, 0.08);
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
+            border-color: rgba(217, 181, 168, 0.3);
         }
 
         .feature-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 24px;
-            border-radius: 24px;
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 28px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
         }
 
         .feature-card h3 {
             font-size: 24px;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             color: #3D3230;
+            letter-spacing: -0.01em;
         }
 
         .feature-card p {
             font-size: 16px;
             color: #6B7280;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        /* Gradient backgrounds for feature icons */
+        /* Icon gradients matching app */
         .icon-chat { background: linear-gradient(135deg, #C8B8D4 0%, #DDD6FE 100%); }
         .icon-mood { background: linear-gradient(135deg, #D9B5A8 0%, #E5D3C8 100%); }
         .icon-tools { background: linear-gradient(135deg, #C8D9E8 0%, #B8C9E3 100%); }
         .icon-support { background: linear-gradient(135deg, #F5D9E0 0%, #ECC9D8 100%); }
 
+        /* SVG Icons */
+        .feature-icon svg {
+            width: 36px;
+            height: 36px;
+        }
+
         /* Privacy Policy Section */
         .privacy {
-            padding: 80px 20px;
+            padding: 100px 24px;
             max-width: 900px;
             margin: 0 auto;
+            background: #FFF5ED;
         }
 
         .privacy h2 {
-            font-size: 36px;
+            font-size: 44px;
             font-weight: 800;
-            margin-bottom: 32px;
+            margin-bottom: 40px;
             color: #3D3230;
+            letter-spacing: -0.02em;
         }
 
         .privacy h3 {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 700;
-            margin-top: 40px;
-            margin-bottom: 16px;
+            margin-top: 48px;
+            margin-bottom: 20px;
             color: #3D3230;
+            letter-spacing: -0.01em;
         }
 
         .privacy p, .privacy li {
-            font-size: 16px;
+            font-size: 17px;
             color: #6B7280;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
+            line-height: 1.8;
         }
 
         .privacy ul {
-            margin-left: 24px;
-            margin-bottom: 24px;
+            margin-left: 28px;
+            margin-bottom: 28px;
         }
 
         .privacy li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
 
         .privacy a {
             color: #C9A89E;
             text-decoration: none;
             font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
         }
 
         .privacy a:hover {
-            text-decoration: underline;
+            border-bottom-color: #C9A89E;
+        }
+
+        .privacy strong {
+            color: #3D3230;
+            font-weight: 600;
         }
 
         /* Footer */
         footer {
-            padding: 60px 20px;
+            padding: 80px 24px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.6);
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            background: white;
+            border-top: 1px solid rgba(61, 50, 48, 0.08);
         }
 
         footer p {
@@ -258,27 +288,65 @@
         }
 
         .footer-quote {
-            font-size: 20px;
+            font-size: 24px;
             font-style: italic;
             color: #C9A89E;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
             font-weight: 600;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            h1 { font-size: 36px; }
+            h1 { font-size: 40px; }
+            .hero h2 { font-size: 32px; }
+            .features h2 { font-size: 32px; }
+            .privacy h2 { font-size: 32px; }
+            .cta-buttons {
+                flex-direction: column;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 32px; }
             .hero h2 { font-size: 28px; }
-            .features h2 { font-size: 28px; }
-            .privacy h2 { font-size: 28px; }
-            .cta-buttons { flex-direction: column; }
+            .tagline { font-size: 18px; }
+            .subtitle { font-size: 16px; }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">🫂</div>
+        <div class="logo-container">
+            <!-- Amigo Iké Logo SVG -->
+            <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="95" fill="#FFF5ED" opacity="0.8"/>
+                <!-- Chat bubble -->
+                <ellipse cx="75" cy="95" rx="28" ry="26" fill="#F5C563" stroke="#2D3748" stroke-width="3"/>
+                <path d="M 60 115 L 55 125 L 70 118" fill="#F5C563" stroke="#2D3748" stroke-width="3" stroke-linejoin="round"/>
+                <!-- Smile on chat bubble -->
+                <circle cx="68" cy="90" r="2.5" fill="#2D3748"/>
+                <circle cx="82" cy="90" r="2.5" fill="#2D3748"/>
+                <path d="M 68 100 Q 75 105 82 100" stroke="#2D3748" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <!-- Head silhouette -->
+                <path d="M 95 130 L 95 85 Q 95 65 115 65 Q 135 65 135 85 L 135 130 L 95 130 Z"
+                      fill="url(#headGradient)" stroke="#2D3748" stroke-width="3"/>
+                <!-- Heart in head -->
+                <path d="M 115 85 Q 110 80 105 85 Q 105 90 115 100 Q 125 90 125 85 Q 125 80 120 85 Q 117.5 82.5 115 85 Z"
+                      fill="#F5A5A5" stroke="#2D3748" stroke-width="2"/>
+                <defs>
+                    <linearGradient id="headGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#E8B4D4;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#A8C8E8;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
         <h1>Amigo Iké</h1>
         <p class="tagline">Um companheiro, não uma ferramenta</p>
         <p class="subtitle">Alguém sentado ao seu lado, não olhando para você</p>
@@ -302,22 +370,44 @@
             <h2>Como o Amigo Iké pode ajudar</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon icon-chat">💬</div>
+                    <div class="feature-icon icon-chat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2D3748" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
                     <h3>Conversa sem julgamento</h3>
                     <p>IA compassiva disponível 24/7 para ouvir, validar, e oferecer suporte emocional quando você mais precisa.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon icon-mood">🎭</div>
+                    <div class="feature-icon icon-mood">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2D3748" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
                     <h3>Rastreamento de humor</h3>
                     <p>Acompanhe como você está se sentindo ao longo do tempo e identifique padrões nas suas emoções.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon icon-tools">🌿</div>
+                    <div class="feature-icon icon-tools">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2D3748" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a10 10 0 0 1 7.07 17.07l-2.82 2.83a4 4 0 0 1-5.66 0l-2.82-2.83A10 10 0 0 1 12 2z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
                     <h3>Ferramentas de autocuidado</h3>
                     <p>Exercícios de respiração, ancoragem, meditação guiada, e diário para momentos difíceis.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon icon-support">🆘</div>
+                    <div class="feature-icon icon-support">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#2D3748" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                    </div>
                     <h3>Apoio profissional</h3>
                     <p>Conexão direta com CVV, CAPS, e psicólogos parceiros quando você precisar de ajuda especializada.</p>
                 </div>
@@ -416,9 +506,9 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="footer-quote">"Estar aqui já é um ato de coragem." 🫂</p>
+            <p class="footer-quote">"Estar aqui já é um ato de coragem."</p>
             <p>&copy; 2026 Amigo Iké - Vibecode. Todos os direitos reservados.</p>
-            <p style="margin-top: 16px; font-size: 14px;">
+            <p style="margin-top: 20px; font-size: 14px;">
                 Amigo Iké não substitui tratamento profissional. Em caso de crise, ligue para CVV 188.
             </p>
         </div>
