@@ -325,24 +325,37 @@
         <div class="logo-container">
             <!-- Amigo Iké Logo SVG -->
             <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="100" r="95" fill="#FFF5ED" opacity="0.8"/>
-                <!-- Chat bubble -->
-                <ellipse cx="75" cy="95" rx="28" ry="26" fill="#F5C563" stroke="#2D3748" stroke-width="3"/>
-                <path d="M 60 115 L 55 125 L 70 118" fill="#F5C563" stroke="#2D3748" stroke-width="3" stroke-linejoin="round"/>
-                <!-- Smile on chat bubble -->
-                <circle cx="68" cy="90" r="2.5" fill="#2D3748"/>
-                <circle cx="82" cy="90" r="2.5" fill="#2D3748"/>
-                <path d="M 68 100 Q 75 105 82 100" stroke="#2D3748" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                <!-- Head silhouette -->
-                <path d="M 95 130 L 95 85 Q 95 65 115 65 Q 135 65 135 85 L 135 130 L 95 130 Z"
-                      fill="url(#headGradient)" stroke="#2D3748" stroke-width="3"/>
+                <!-- Background circle -->
+                <circle cx="100" cy="100" r="95" fill="#F5EFE7"/>
+
+                <!-- Chat bubble (orange circle with smile) -->
+                <circle cx="70" cy="95" r="25" fill="#F5A962" stroke="#3D3E52" stroke-width="3"/>
+
+                <!-- Smile face on chat bubble -->
+                <circle cx="64" cy="90" r="2.5" fill="#3D3E52"/>
+                <circle cx="76" cy="90" r="2.5" fill="#3D3E52"/>
+                <path d="M 64 100 Q 70 104 76 100" stroke="#3D3E52" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+                <!-- Chat bubble tail -->
+                <path d="M 55 110 L 50 120 L 60 112" fill="#F5A962" stroke="#3D3E52" stroke-width="3" stroke-linejoin="round"/>
+
+                <!-- Head silhouette (rounded rectangle shape) -->
+                <path d="M 95 135 L 95 80 Q 95 70 105 70 L 125 70 Q 135 70 135 80 L 135 135 Z"
+                      fill="url(#headGradient)" stroke="#3D3E52" stroke-width="3"/>
+
                 <!-- Heart in head -->
-                <path d="M 115 85 Q 110 80 105 85 Q 105 90 115 100 Q 125 90 125 85 Q 125 80 120 85 Q 117.5 82.5 115 85 Z"
-                      fill="#F5A5A5" stroke="#2D3748" stroke-width="2"/>
+                <path d="M 115 85
+                         C 112 82 108 82 106 85
+                         C 106 88 108 91 115 98
+                         C 122 91 124 88 124 85
+                         C 124 82 120 82 117 85
+                         C 116.5 84.5 115.5 84.5 115 85 Z"
+                      fill="#F29BA7" stroke="#3D3E52" stroke-width="2"/>
+
                 <defs>
                     <linearGradient id="headGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style="stop-color:#E8B4D4;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#A8C8E8;stop-opacity:1" />
+                        <stop offset="0%" style="stop-color:#E5B8CE;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#A8B8D8;stop-opacity:1" />
                     </linearGradient>
                 </defs>
             </svg>
